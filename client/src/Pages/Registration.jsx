@@ -61,7 +61,7 @@ function Registration() {
 
     const signUpData = {
       ...formData,
-      userType,
+      accountType: userType,
     };
 
     dispatch(setSignUpData(signUpData));

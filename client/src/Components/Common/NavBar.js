@@ -207,40 +207,42 @@ function NavBar() {
                 </nav>
 
                 {/* Login/Signup/Dashboard */}
-                <div className="hidden md:flex items-center gap-x-8">
-                    {/* Show Cart */}
-                    {user && user?.accountType !== "Instructor" && (
-                        <Link to="/dashboard/cart" className="relative">
-                            <IoCartOutline className="text-2xl text-richblack-100" />
-                            {totalItems > 0 && (
-                                <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-richblack-600 text-xs font-bold text-yellow-100">
-                                    {totalItems}
-                                </span>
-                            )}
-                        </Link>
-                    )}
-                    {/* Login/Signup Buttons */}
-                    {token === null && (
-                        <>
-                            <Link to="/login">
-                                <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 hover:bg-richblack-700">
-                                    LogIn
-                                </button>
+                <div className='flex flex-row space-x-6'>
+                    <div className="hidden md:flex flex-row space-x-6">
+                        {/* Show Cart */}
+                        {user && user?.accountType !== "Instructor" && (
+                            <Link to="/dashboard/cart" className="relative">
+                                <IoCartOutline className="text-2xl text-richblack-100" />
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-richblack-600 text-xs font-bold text-yellow-100">
+                                        {totalItems}
+                                    </span>
+                                )}
                             </Link>
-                            <Link to="/signUp">
-                                <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 hover:bg-richblack-700">
-                                    SignUp
-                                </button>
-                            </Link>
-                        </>
-                    )}
-                    {/* Profile Dropdown and Notifications */}
-                    {token !== null && (
-                        <>
-                            <ProfileDropDown />
-                            {user?.accountType !== "Admin" && <ShowNotifications />}
-                        </>
-                    )}
+                        )}
+                        {/* Login/Signup Buttons */}
+                        {token === null && (
+                            <>
+                                <Link to="/login">
+                                    <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 hover:bg-richblack-700">
+                                        LogIn
+                                    </button>
+                                </Link>
+                                <Link to="/signUp">
+                                    <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 hover:bg-richblack-700">
+                                        SignUp
+                                    </button>
+                                </Link>
+                            </>
+                        )}
+                        {/* Profile Dropdown and Notifications */}
+                        {token !== null && (
+                            <>
+                                <ProfileDropDown />
+                                {user?.accountType !== "Admin" && <ShowNotifications />}
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

@@ -55,7 +55,7 @@ function ProfileDropdown() {
             <img
                 src={img}
                 alt="Profile"
-                className="w-8 h-8 rounded-full cursor-pointer ml-12 translate-x-52"
+                className="w-8 h-8 rounded-full cursor-pointer"
                 onClick={toggleDropdown}
             />
             {dropdownOpen && (

@@ -74,10 +74,12 @@ exports.sendOTPController = async (req, res) => {
 // Sign UP
 exports.signUpController = async (req, res) => {
     try {
+        console.log("Inside sign up controller..")
         // fecth the data from req ki body
         const { firstName, lastName, email, password,
             confirmPassword, accountType, otp
         } = req.body;
+        console.log("Data from frontend : ", req.body);
         // check the all the data are present or not means they are empty or not
         if (!firstName || !lastName || !email
             || !password || !confirmPassword || !accountType

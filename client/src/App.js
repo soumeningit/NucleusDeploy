@@ -40,7 +40,7 @@ function App() {
   const { user } = useSelector((state) => state.profile);
 
   return (
-    <div className="flex flex-col font-inter min-h-screen">
+    <div className="flex flex-col font-inter min-h-screen overflow-hidden">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
