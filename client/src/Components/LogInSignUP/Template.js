@@ -23,10 +23,10 @@ function Template({ heading, description1, description2, img, formtype, setIsLog
                     <p className='text-richblack-700 font-medium leading-[1.375rem]'></p> OR
                     <div className='w-full h-[0.05rem] bg-richblack-700'></div>
                 </div>
-                <button className='border border-richblack-700 w-full py-1 px-4 text-sm rounded-md flex items-center justify-center text-richblack-100 gap-x-2 font-medium mt-4'>
+                {/* <button className='border border-richblack-700 w-full py-1 px-4 text-sm rounded-md flex items-center justify-center text-richblack-100 gap-x-2 font-medium mt-4'>
                     <FcGoogle />
                     Sign in with Google
-                </button>
+                </button> */}
             </div>
 
             <div className='w-11/12 max-w-[450px] relative'>

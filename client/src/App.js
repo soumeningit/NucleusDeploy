@@ -31,6 +31,8 @@ import Message from "./Pages/Message";
 import InstructorDashboard from "./Components/Dashboard/InstructorDashboard";
 import AboutUs from "./Pages/AboutUs";
 import AllCourses from "./Pages/AllCourses";
+import Registration from "./Pages/Registration";
+import SignIn from "./Pages/SignIn";
 
 
 function App() {
@@ -38,15 +40,16 @@ function App() {
   const { user } = useSelector((state) => state.profile);
 
   return (
-    <div className="w-screen min-h-screen bg-white flex flex-col font-inter">
+    <div className="flex flex-col font-inter min-h-screen">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/allcourses" element={<AllCourses />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/catagory/:categoryName" element={<CatagoryPage />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Registration />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<SignIn />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/courses/:courseId" element={<CourseLandingPage />} />
         <Route path="/verify-email" element={<OtpForm />} />

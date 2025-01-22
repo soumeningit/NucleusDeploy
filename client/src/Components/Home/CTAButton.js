@@ -6,7 +6,7 @@ function CTAButton({ text, active, linkto }) {
         <div>
             <Link to={linkto}>
                 <button className={`text-center text-[14px] px-6 py-2 rounded-md font-bold
-                    ${active ? "bg-yellow-50 text-black" : "bg-richblack-100"}
+                    ${active ? "bg-blue-900 text-white" : "bg-richblack-100"}
                     hover:scale-95 transition-all duration-200`
                 }
                 >

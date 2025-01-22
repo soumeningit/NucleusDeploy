@@ -113,12 +113,12 @@ const courses = [
 
 const languages = [
     {
-        name: "c",
+        name: "C",
         link: "/c"
     },
     {
         name: "C++",
-        link: "/c++",
+        link: "/cpp",
     },
     {
         name: "Java",
@@ -153,7 +153,7 @@ const languages = [
 function Footer() {
     return (
         <>
-            <footer>
+            <footer className="bg-[#5d646452]">
                 <div className="mx-auto px-4 flex flex-col">
                     <div className="flex flex-row justify-evenly md:flex-row mt-9">
                         {/* Contact Information */}
@@ -200,7 +200,7 @@ function Footer() {
 
                     </div>
 
-                    <div className="social flex flex-col place-items-end mr-4 mt-10">
+                    <div className="flex flex-col place-items-end mr-4 mt-10">
                         {/* Social Media Links */}
                         <div className="mb-6 md:mb-0">
                             <h3 className="text-xl font-semibold">Follow Us</h3>
@@ -208,25 +208,25 @@ function Footer() {
                                 <ul className="example-2">
                                     <li className="icon-content">
                                         <Link
-                                            to="https://linkedin.com/"
+                                            to="https://www.linkedin.com/in/soumenpal01/"
                                             aria-label="LinkedIn"
                                             data-social="linkedin"
                                         >
                                             <div className="filled"></div>
                                             <LinkedInIcon />
                                         </Link>
-                                        <div className="tooltip">LinkedIn</div>
+                                        <div className="tooltip">soumenpal01</div>
                                     </li>
                                     <li className="icon-content">
                                         <Link
-                                            to="https://www.github.com/"
+                                            to="https://github.com/soumeningit"
                                             aria-label="GitHub"
                                             data-social="github"
                                         >
                                             <div className="filled"></div>
                                             <GitHubIcon />
                                         </Link>
-                                        <div className="tooltip">GitHub</div>
+                                        <div className="tooltip">soumeningit</div>
                                     </li>
                                     <li className="icon-content">
                                         <Link
@@ -237,7 +237,7 @@ function Footer() {
                                             <div className="filled"></div>
                                             <InstagramIcon />
                                         </Link>
-                                        <div className="tooltip">Instagram</div>
+                                        <div className="tooltip">Soumen</div>
                                     </li>
                                     <li className="icon-content">
                                         <Link
@@ -248,33 +248,24 @@ function Footer() {
                                             <div className="filled"></div>
                                             <YouTubeIcon />
                                         </Link>
-                                        <div className="tooltip">YouTube</div>
+                                        <div className="tooltip">Soumen</div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        {/* Newsletter Signup */}
-                        {/* <div className="mb-6 md:mb-0">
-                            <h3 className="text-xl font-semibold">Newsletter</h3>
-                            <form className="flex">
-                                <input
-                                    type="email"
-                                    placeholder="Your email"
-                                    className="p-2 rounded-l-md border-none outline-none"
-                                />
-                                <button
-                                    type="submit"
-                                    className="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600"
-                                >
-                                    Subscribe
-                                </button>
-                            </form>
-                        </div> */}
                     </div>
 
-                    <div className="text-center mt-6">
-                        <p>&copy; 2024 Nucleus. All rights reserved.</p>
+                    {/* Copy Right */}
+                    <hr className="border border-white mt-10" />
+
+                    <div className="flex flex-row justify-between mt-2">
+                        <div>
+                            <p className="text-center mt-6">Developed By <strong>Soumen</strong></p>
+                        </div>
+                        <div className="text-center mt-6">
+                            <p>&copy; 2024 Nucleus. All rights reserved.</p>
+                        </div>
                     </div>
 
                 </div>

@@ -19,7 +19,7 @@ const FAQItem = ({ question, answer }) => {
     );
 };
 
-const FAQSection = () => {
+function FAQSection() {
     const faqs = [
         {
             question: 'What subjects or courses do you offer?',
@@ -49,8 +49,7 @@ const FAQSection = () => {
     ];
 
     return (
-        <section className="bg-[rgba(31,41,55,255)] text-white flex flex-col items-center mt-10 w-full mx-auto justify-center">
-            <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">How it works</p>
+        <section className="bg-[rgba(31,41,55,255)] text-white flex flex-col mt-10 items-center w-full mx-auto justify-center">
             <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
             <div className="w-8/12">
                 {faqs.map((faq, index) => (
